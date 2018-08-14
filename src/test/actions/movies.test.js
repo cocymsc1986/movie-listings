@@ -2,13 +2,13 @@ import {
 	GET_LATEST_REQUEST,
 	GET_LATEST_SUCCESS,
 	GET_LATEST_ERROR
-} from '../constants';
+} from '../../constants';
 
 import {
 	getLatestRequest,
 	getLatestSuccess,
 	getLatestError
-} from '../../src/actions/movies';
+} from '../../actions/movies';
 
 describe('Movies actions', () => {
 	describe('getLatestRequest', () => {
@@ -21,11 +21,11 @@ describe('Movies actions', () => {
 
 	describe('getLatestSuccess', () => {
 		test('Should return the correct type and payload', () => {
-			const data = ['test'];
+			const data = 'test';
 			const result = getLatestSuccess(data);
 
 			expect(result.type).toBe(GET_LATEST_SUCCESS);
-			expect(result.movies).toBe(['test']);
+			expect(result.movies).toBe('test');
 		});
 	});
 

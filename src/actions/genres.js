@@ -21,8 +21,8 @@ export const getGenresError = error => ({
 });
 
 // Pass in service to enable mocking in test
-export const actionCreator = (dispatch, ServiceCreator = serviceCreator) => {
-	const getGenres = async () => {
+export const actionCreator = (ServiceCreator = serviceCreator) => {
+	const getGenres = () => async (dispatch) => {
 		dispatch(getGenresRequest);
 
 		const tmdbService = ServiceCreator();
@@ -40,4 +40,4 @@ export const actionCreator = (dispatch, ServiceCreator = serviceCreator) => {
 	}
 }
 
-export default actionCreator;
+export default actionCreator();
