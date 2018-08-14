@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   async componentWillMount() {
-    await Promise.all([this.props.getGenres(), this.props.getLatest()]);
+    await Promise.all([this.props.getGenres()]);
     await this.props.getGenres();
     const { genres } = this.props.genres.data;
 

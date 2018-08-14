@@ -2,14 +2,14 @@ import {
 	GET_GENRES_REQUEST,
 	GET_GENRES_SUCCESS,
 	GET_GENRES_ERROR
-} from '../constants';
+} from '../../constants';
 
 import {
 	getGenresRequest,
 	getGenresSuccess,
 	getGenresError,
 	actionCreator
-} from '../../src/actions/genres';
+} from '../../actions/genres';
 
 describe('Genres actions', () => {
 	describe('getGenresRequest', () => {
@@ -22,11 +22,11 @@ describe('Genres actions', () => {
 
 	describe('getGenresSuccess', () => {
 		test('Should return the correct type and payload', () => {
-			const data = ['test'];
+			const data = 'test';
 			const result = getGenresSuccess(data);
 
 			expect(result.type).toBe(GET_GENRES_SUCCESS);
-			expect(result.genres).toBe(['test']);
+			expect(result.genres).toBe('test');
 		});
 	});
 
@@ -40,22 +40,19 @@ describe('Genres actions', () => {
 		});
 	});
 
-	describe('ActionCreator', async () => {
-		test('Should call request and success when data is returned', () => {
+	describe('ActionCreator', () => {
+		test('Should call request and success when data is returned', async () => {
 			const dispatch = jest.fn();
 			const getGenres = jest.fn(() => Promise.resolve([{ name: 'Con Air' }]))
 			const serviceCreator = jest.fn(() => ({
 				getGenres
 			}));
 
-			const actions = actionCreator(dispatch, serviceCreator);
+			const actions = actionCreator(serviceCreator);
 
-			await actions.getGenres;
+			await actions.getGenres()(dispatch);
 
 			expect(dispatch).toHaveBeenCalledTimes(2);
-			expect(dispatch).toBeCalledWith({
-				type: GET_GENRES_REQUEST
-			});
 			expect(dispatch).toBeCalledWith({
 				type: GET_GENRES_SUCCESS,
 				genres: [{ name: 'Con Air' }]
