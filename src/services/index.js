@@ -7,8 +7,6 @@ export default () => {
 	const getNowPlaying = async () => {
 		const { data } = await axios.get(`${baseUrl}/movie/now_playing?api_key=${apiKey}`);
 
-		console.log('***** ', data);
-
 		return data;
 	}
 
