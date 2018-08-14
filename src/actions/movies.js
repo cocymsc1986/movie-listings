@@ -20,14 +20,14 @@ export const getLatestError = error => ({
 	error
 });
 
-export default dispatch => {
-	const getLatest = async () => {
+export const actionCreator = (ServiceCreator = serviceCreator) => {
+	const getLatest = () => async dispatch => {
 		dispatch(getLatestRequest);
 
 		const tmdbService = serviceCreator();
 
 		try {
-			const response = await tmdbService.getLatest();
+			const response = await tmdbService.getNowPlaying();
 			dispatch(getLatestSuccess(response));
 		} catch (err) {
 			dispatch(getLatestError(err))
@@ -38,3 +38,5 @@ export default dispatch => {
 		getLatest
 	}
 }
+
+export default actionCreator();
