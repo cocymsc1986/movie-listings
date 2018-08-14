@@ -25,8 +25,6 @@ class App extends Component {
       genres,
       movies
     });
-
-    console.log(this.props);
   }
 
   getGenreLabels(genreIds) {
