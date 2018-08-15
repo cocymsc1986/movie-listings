@@ -12,14 +12,13 @@ export const getGenreLabels = (genreIds, genres) => {
 	return labels;
 };
 
-export const MovieContainer = ({ imagePath, title, genreIds, genres, movieKey }) => {
+export const MovieContainer = ({ imagePath, title, genreIds, genres }) => {
 	return (
 		<Movie
 			imagePath={imagePath}
 			title={title}
 			genreIds={genreIds}
 			genreLabels={getGenreLabels(genreIds, genres)}
-			movieKey={movieKey}
 		/>
 	);
 }
