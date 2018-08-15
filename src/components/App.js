@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import Movie from './MovieContainer';
 import '../App.css';
 
 class App extends Component {
@@ -89,12 +91,14 @@ class App extends Component {
         Movies
         {movies && this.filterMovies(movies).map((movie, key) => {
           return (
-            <ul key={key}>
-              <li><img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`${movie.title}-image`} /></li>
-              <li>{movie.title}</li>
-              <li>{this.getGenreLabels(movie.genre_ids)}</li>
-            </ul>
-          )
+            <Movie
+              imagePath={movie.poster_path}
+              title={movie.title}
+              genreIds={movie.genre_ids}
+              genres={genres}
+              movieKey={key}
+            />
+          );
         })}
       </div>
     );
