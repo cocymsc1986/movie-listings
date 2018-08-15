@@ -70,11 +70,12 @@ class App extends Component {
     return (
       <main className="app">
         <section className="filters">
+          <h2>Filters</h2>
           <Rating 
             ratingValue={score_filter}
             updateScoreFilter={this.updateScoreFilter}
           />
-          <h2>Genres</h2>
+          <h3>Genres</h3>
           <div className="filters__genres">
             {genres && genres.map((genre, key) => {
               return (

@@ -1,5 +1,15 @@
 .app {
   padding: 1rem;
+  display: flex;
+}
+
+.filters {
+  width: 25%;
+  margin-right: 2%;
+}
+
+.movies {
+  width: 73%;
 }
 
 .filters__genres {
@@ -8,7 +18,7 @@
 }
 
 .filters__genre {
-  width: 25%;
+  width: 50%;
   padding: 0.75rem;
   border: 1px solid #fff;
   background: #00bab3;
@@ -40,14 +50,12 @@
   width: 50%;
   display: flex;
   margin-bottom: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
 }
 
 .movies__image {
   margin-right: 0.5rem;
-}
-
-.movies__genre-labels {
-  
 }
 
 .movies__genre-label {
@@ -67,7 +75,7 @@
 /* Slider */
 input[type=range] {
   -webkit-appearance: none;
-  width: 100%;
+  width: 95%;
   background: transparent;
 }
 
@@ -76,7 +84,7 @@ input[type=range]:focus {
 }
 
 input[type=range]::-ms-track {
-  width: 100%;
+  width: 95%;
   cursor: pointer;
 
   /* Hides the slider so custom styles can be added */
@@ -88,12 +96,12 @@ input[type=range]::-ms-track {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
-  height: 36px;
-  width: 36px;
+  height: 28px;
+  width: 28px;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: -11px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 }
 
@@ -101,8 +109,8 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-moz-range-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
-  height: 36px;
-  width: 36px;
+  height: 28px;
+  width: 28px;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
@@ -112,8 +120,8 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-ms-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
-  height: 36px;
-  width: 36px;
+  height: 28px;
+  width: 28px;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
@@ -121,7 +129,7 @@ input[type=range]::-ms-thumb {
 
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8.4px;
+  height: 7px;
   cursor: pointer;
   background: #00bab3;
   border-radius: 3px;
@@ -129,7 +137,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]::-moz-range-track {
   width: 100%;
-  height: 8.4px;
+  height: 7px;
   cursor: pointer;
   background: #00bab3;
   border-radius: 3px;
@@ -137,7 +145,7 @@ input[type=range]::-moz-range-track {
 
 input[type=range]::-ms-track {
   width: 100%;
-  height: 8.4px;
+  height: 7px;
   cursor: pointer;
   background: transparent;
   border-color: transparent;
@@ -160,12 +168,42 @@ input[type=range]::-ms-fill-upper {
 
 /* Slider end */
 
-@media only screen and (max-width: 720px) {
-  .filters__genre {
-    width: 50%;
-  }
-
+@media only screen and (max-width: 1024px) {
   .movies__result { 
     width: 100%;
+  }
+
+  .filters {
+    width: 30%;
+  }
+  
+  .movies {
+    width: 68%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .filters__genre {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .app {
+    display: block;
+  }
+
+  .filters {
+    width: 100%;
+    margin-right: 0%;
+  }
+  
+  .movies {
+    width: 100%;
+  }
+
+  .filters__genre {
+    font-size: 14px;
+    width: 25%;
   }
 }
