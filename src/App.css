@@ -1,28 +1,75 @@
-.App {
-  text-align: center;
+.app {
+  padding: 1rem;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.filters__genres {
+  display: flex;
+  flex-flow: wrap;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.filters__genre {
+  width: 25%;
+  padding: 0.75rem;
+  border: 1px solid #fff;
+  background: #00bab3;
   color: white;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
-.App-title {
-  font-size: 1.5em;
+.filters__genre.filters__genre--selected {
+  background: #019b95;
+  box-shadow: inset 3px 3px 10px #018782;
 }
 
-.App-intro {
-  font-size: large;
+.filters__genre label {
+  pointer-events: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.filters__genre input[type=checkbox] {
+  display: none;
+}
+
+.movies__results {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.movies__result {
+  width: 50%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.movies__image {
+  margin-right: 0.5rem;
+}
+
+.movies__genre-labels {
+  
+}
+
+.movies__genre-label {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  background: #5900bf;
+  color: #fff;
+}
+
+.movies__genre-label:last-child {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 720px) {
+  .filters__genre {
+    width: 50%;
+  }
+
+  .movies__result { 
+    width: 100%;
+  }
 }

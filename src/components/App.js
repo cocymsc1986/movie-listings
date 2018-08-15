@@ -14,7 +14,7 @@ class App extends Component {
       score_filter: 0
     }
 
-    this.updateGenreFilter = this.updateGenreFilter.bind(this);
+    this.clickCheckBox = this.clickCheckBox.bind(this);
     this.updateScoreFilter = this.updateScoreFilter.bind(this);
   }
 
@@ -29,33 +29,26 @@ class App extends Component {
     });
   }
 
-  getGenreLabels(genreIds) {
-    const { genres } = this.state;
-
-    return genreIds.map(id => {
-      const label = genres.find(genre => genre.id === id);
-      return (
-        <span>
-          {label.name}
-        </span>
-      )
-    })
-  }
-
   updateScoreFilter(event) {
     this.setState({
       score_filter: event.target.value
     });
   };
 
-  updateGenreFilter(event) {
+  clickCheckBox(event) {
+    const checkbox = event.target.children[1];
     const filters = this.state.genre_filter;
+    const classes = event.target.classList;
 
-    if (event.target.checked) {
-      filters.push(event.target.value)
+    checkbox.checked = !checkbox.checked;
+
+    if (checkbox.checked) {
+      filters.push(checkbox.value);
+      event.target.classList.add('filters__genre--selected');
     } else {
-      const index = filters.indexOf(event.target.value)
-      filters.splice(index, 1)
+      const index = filters.indexOf(checkbox.value);
+      filters.splice(index, 1);
+      event.target.classList.remove('filters__genre--selected');
     };
 
     this.setState({
@@ -75,32 +68,42 @@ class App extends Component {
     const { genres, movies } = this.state;
 
     return (
-      <div className="App">
-        Rating
-        <input type="range" min="0" max="10" step="0.5" value={this.state.score_filter} onChange={this.updateScoreFilter} />
-        Genres
-        {genres && genres.map((genre, key) => {
-          return (
-            <div key={key}>
-              <label htmlFor={`genre-${genre.id}`}>{genre.name}</label>
-              <input onChange={this.updateGenreFilter} type="checkbox" id={`genre-${genre.id}`} value={genre.id} />
-            </div>
-          )
-        })}
+      <main className="app">
+        <section className="filters">
+          <label htmlFor="rating"><h2>Rating</h2></label>
+          <div className="filters__rating">
+            <input id="rating" type="range" min="0" max="10" step="0.5" value={this.state.score_filter} onChange={this.updateScoreFilter} />
+          </div>
+          <h2>Genres</h2>
+          <div className="filters__genres">
+            {genres && genres.map((genre, key) => {
+              return (
+                <div className="filters__genre" onClick={this.clickCheckBox} key={key}>
+                  <label htmlFor={`genre-${genre.id}`}>{genre.name}</label>
+                  <input type="checkbox" id={`genre-${genre.id}`} value={genre.id} />
+                </div>
+              )
+            })}
+          </div>
+        </section>
 
-        Movies
-        {movies && this.filterMovies(movies).map((movie, key) => {
-          return (
-            <Movie
-              imagePath={movie.poster_path}
-              title={movie.title}
-              genreIds={movie.genre_ids}
-              genres={genres}
-              movieKey={key}
-            />
-          );
-        })}
-      </div>
+        <section class="movies"> 
+          <h2>Movies</h2>
+          <div className="movies__results">
+            {movies && this.filterMovies(movies).map((movie, key) => {
+              return (
+                <Movie
+                  imagePath={movie.poster_path}
+                  title={movie.title}
+                  genreIds={movie.genre_ids}
+                  genres={genres}
+                  key={key}
+                />
+              )
+            })}
+          </div>
+        </section>
+      </main>
     );
   }
 }
