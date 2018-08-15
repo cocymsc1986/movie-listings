@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import Movie from './MovieContainer';
 import '../App.css';
 
 class App extends Component {
@@ -25,19 +27,6 @@ class App extends Component {
       genres,
       movies
     });
-  }
-
-  getGenreLabels(genreIds) {
-    const { genres } = this.state;
-
-    return genreIds.map(id => {
-      const label = genres.find(genre => genre.id === id);
-      return (
-        <span className="movies__genre-label">
-          {label.name}
-        </span>
-      )
-    })
   }
 
   updateScoreFilter(event) {
@@ -103,13 +92,13 @@ class App extends Component {
           <div className="movies__results">
             {movies && this.filterMovies(movies).map((movie, key) => {
               return (
-                <article className="movies__result" key={key}>
-                  <div className="movies__image"><img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={`${movie.title}-image`} /></div>
-                  <div>
-                    <div className="movies__title"><h3>{movie.title}</h3></div>
-                    <div className="movies__genre-labels">{this.getGenreLabels(movie.genre_ids)}</div>
-                  </div>
-                </article>
+                <Movie
+                  imagePath={movie.poster_path}
+                  title={movie.title}
+                  genreIds={movie.genre_ids}
+                  genres={genres}
+                  key={key}
+                />
               )
             })}
           </div>
