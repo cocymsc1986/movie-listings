@@ -19,6 +19,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": "test-label",
+      "className": "movies__genre-label",
     },
     "ref": null,
     "rendered": "test-label",
@@ -31,6 +32,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": "test-label",
+        "className": "movies__genre-label",
       },
       "ref": null,
       "rendered": "test-label",

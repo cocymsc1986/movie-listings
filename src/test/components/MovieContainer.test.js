@@ -35,7 +35,6 @@ describe('MovieContainer component', () => {
 					genres={genres}
 					imagePath={'path/to/image'}
 					title={'test-title'}
-					movieKey={1}
 				/>
 			);
 
@@ -43,7 +42,6 @@ describe('MovieContainer component', () => {
 			expect(wrapper.find(Movie).prop('genreLabels')).toEqual(['action', 'thriller', 'comedy']);
 			expect(wrapper.find(Movie).prop('imagePath')).toBe('path/to/image');
 			expect(wrapper.find(Movie).prop('title')).toBe('test-title');
-			expect(wrapper.find(Movie).prop('movieKey')).toBe(1);
 		});
 	});
 });

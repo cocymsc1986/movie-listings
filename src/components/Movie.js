@@ -8,7 +8,7 @@ export class Movie extends Component {
 
 		return (
 			<article className="movies__result">
-				<div className="movies__image"><img src={`https://image.tmdb.org/t/p/w200/${imagePath}`} alt={`${title}-image`} /></div>
+				<div className="movies__image"><img src={`https://image.tmdb.org/t/p/w200/${imagePath}`} alt={`${title}`} /></div>
 				<div>
 					<div className="movies__title"><h3>{title}</h3></div>
 					<div className="movies__genre-labels">{genreLabels.map((label, key) => <Label label={label} key={key} />)}</div>

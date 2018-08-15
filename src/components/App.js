@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Movie from './MovieContainer';
+import Rating from './Rating'
 import '../App.css';
 
 class App extends Component {
@@ -38,7 +39,6 @@ class App extends Component {
   clickCheckBox(event) {
     const checkbox = event.target.children[1];
     const filters = this.state.genre_filter;
-    const classes = event.target.classList;
 
     checkbox.checked = !checkbox.checked;
 
@@ -60,20 +60,20 @@ class App extends Component {
     const { genre_filter, score_filter } = this.state;
 
     return movies.filter(movie => {
-      return genre_filter.every(id => movie.genre_ids.includes(parseInt(id))) && movie.vote_average > score_filter;
+      return genre_filter.every(id => movie.genre_ids.includes(parseInt(id, 10))) && movie.vote_average > score_filter;
     });
   }
 
   render() {
-    const { genres, movies } = this.state;
+    const { genres, movies, score_filter } = this.state;
 
     return (
       <main className="app">
         <section className="filters">
-          <label htmlFor="rating"><h2>Rating</h2></label>
-          <div className="filters__rating">
-            <input id="rating" type="range" min="0" max="10" step="0.5" value={this.state.score_filter} onChange={this.updateScoreFilter} />
-          </div>
+          <Rating 
+            ratingValue={score_filter}
+            updateScoreFilter={this.updateScoreFilter}
+          />
           <h2>Genres</h2>
           <div className="filters__genres">
             {genres && genres.map((genre, key) => {

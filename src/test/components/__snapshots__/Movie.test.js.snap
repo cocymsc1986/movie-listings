@@ -22,25 +22,36 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": "1",
+    "key": undefined,
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <li>
+        <div
+          className="movies__image"
+>
           <img
-                    alt="test-title-image"
-                    src="https://image.tmdb.org/t/p/w500/path/to/image"
+                    alt="test-title"
+                    src="https://image.tmdb.org/t/p/w200/path/to/image"
           />
-</li>,
-        <li>
-          test-title
-</li>,
-        <li>
-          <Label
-                    label="test"
-          />
-</li>,
+</div>,
+        <div>
+          <div
+                    className="movies__title"
+          >
+                    <h3>
+                              test-title
+                    </h3>
+          </div>
+          <div
+                    className="movies__genre-labels"
+          >
+                    <Label
+                              label="test"
+                    />
+          </div>
+</div>,
       ],
+      "className": "movies__result",
     },
     "ref": null,
     "rendered": Array [
@@ -50,9 +61,10 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <img
-            alt="test-title-image"
-            src="https://image.tmdb.org/t/p/w500/path/to/image"
+            alt="test-title"
+            src="https://image.tmdb.org/t/p/w200/path/to/image"
 />,
+          "className": "movies__image",
         },
         "ref": null,
         "rendered": Object {
@@ -60,25 +72,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "test-title-image",
-            "src": "https://image.tmdb.org/t/p/w500/path/to/image",
+            "alt": "test-title",
+            "src": "https://image.tmdb.org/t/p/w200/path/to/image",
           },
           "ref": null,
           "rendered": null,
           "type": "img",
         },
-        "type": "li",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "test-title",
-        },
-        "ref": null,
-        "rendered": "test-title",
-        "type": "li",
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -86,52 +87,115 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Label
-              label="test"
-/>,
+            <div
+              className="movies__title"
+>
+              <h3>
+                            test-title
+              </h3>
+</div>,
+            <div
+              className="movies__genre-labels"
+>
+              <Label
+                            label="test"
+              />
+</div>,
           ],
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "0",
-            "nodeType": "function",
+            "key": undefined,
+            "nodeType": "host",
             "props": Object {
-              "label": "test",
+              "children": <h3>
+                test-title
+</h3>,
+              "className": "movies__title",
             },
             "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "test-title",
+              },
+              "ref": null,
+              "rendered": "test-title",
+              "type": "h3",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Label
+                  label="test"
+/>,
+              ],
+              "className": "movies__genre-labels",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "0",
+                "nodeType": "function",
+                "props": Object {
+                  "label": "test",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
         ],
-        "type": "li",
+        "type": "div",
       },
     ],
-    "type": "ul",
+    "type": "article",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": "1",
+      "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <li>
+          <div
+            className="movies__image"
+>
             <img
-                        alt="test-title-image"
-                        src="https://image.tmdb.org/t/p/w500/path/to/image"
+                        alt="test-title"
+                        src="https://image.tmdb.org/t/p/w200/path/to/image"
             />
-</li>,
-          <li>
-            test-title
-</li>,
-          <li>
-            <Label
-                        label="test"
-            />
-</li>,
+</div>,
+          <div>
+            <div
+                        className="movies__title"
+            >
+                        <h3>
+                                    test-title
+                        </h3>
+            </div>
+            <div
+                        className="movies__genre-labels"
+            >
+                        <Label
+                                    label="test"
+                        />
+            </div>
+</div>,
         ],
+        "className": "movies__result",
       },
       "ref": null,
       "rendered": Array [
@@ -141,9 +205,10 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <img
-              alt="test-title-image"
-              src="https://image.tmdb.org/t/p/w500/path/to/image"
+              alt="test-title"
+              src="https://image.tmdb.org/t/p/w200/path/to/image"
 />,
+            "className": "movies__image",
           },
           "ref": null,
           "rendered": Object {
@@ -151,25 +216,14 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "test-title-image",
-              "src": "https://image.tmdb.org/t/p/w500/path/to/image",
+              "alt": "test-title",
+              "src": "https://image.tmdb.org/t/p/w200/path/to/image",
             },
             "ref": null,
             "rendered": null,
             "type": "img",
           },
-          "type": "li",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "test-title",
-          },
-          "ref": null,
-          "rendered": "test-title",
-          "type": "li",
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -177,29 +231,81 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <Label
-                label="test"
-/>,
+              <div
+                className="movies__title"
+>
+                <h3>
+                                test-title
+                </h3>
+</div>,
+              <div
+                className="movies__genre-labels"
+>
+                <Label
+                                label="test"
+                />
+</div>,
             ],
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "0",
-              "nodeType": "function",
+              "key": undefined,
+              "nodeType": "host",
               "props": Object {
-                "label": "test",
+                "children": <h3>
+                  test-title
+</h3>,
+                "className": "movies__title",
               },
               "ref": null,
-              "rendered": null,
-              "type": [Function],
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "test-title",
+                },
+                "ref": null,
+                "rendered": "test-title",
+                "type": "h3",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <Label
+                    label="test"
+/>,
+                ],
+                "className": "movies__genre-labels",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "0",
+                  "nodeType": "function",
+                  "props": Object {
+                    "label": "test",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
             },
           ],
-          "type": "li",
+          "type": "div",
         },
       ],
-      "type": "ul",
+      "type": "article",
     },
   ],
   Symbol(enzyme.__options__): Object {
