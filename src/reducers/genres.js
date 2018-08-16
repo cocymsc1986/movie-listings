@@ -1,7 +1,7 @@
 const defaultState = {
 	data: [],
 	error: null,
-	loading: false
+	loading: true
 }
 
 export default (state = defaultState, { type, genres, error }) => {

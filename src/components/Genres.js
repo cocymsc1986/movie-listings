@@ -1,16 +1,22 @@
-import React, { Fragement } from 'react';
+import React, { Fragment } from 'react';
+
+import Genre from './Genre';
 
 const Genres = ({ genres, clickCheckBox }) => {
     return (
         <Fragment>
-            {genres.map((genre, key) => {
+            {genres && genres.map((genre, key) => {
                 return (
-                    <div className="filters__genre" onClick={this.clickCheckBox} key={key}>
-                        <label htmlFor={`genre-${genre.id}`}>{genre.name}</label>
-                        <input type="checkbox" id={`genre-${genre.id}`} value={genre.id} />
-                    </div>
-                )
+                    <Genre
+                        key={key}
+                        onClick={clickCheckBox}
+                        name={genre.name}
+                        id={genre.id}
+                    />
+                );
             })}
         </Fragment>
     );
 };
+
+export default Genres;

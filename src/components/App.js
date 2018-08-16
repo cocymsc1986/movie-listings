@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Movie from './MovieContainer';
-import Genres from './GenresContainer';
+import Genres from './Genres';
 import Rating from './Rating'
 import '../App.css';
 
@@ -68,6 +68,7 @@ class App extends Component {
 
   render() {
     const { genres, movies, score_filter } = this.state;
+    const { genres: { loading: genresLoading }, movies: { loading: moviesLoading } } = this.props;
 
     return (
       <main className="app">
@@ -80,27 +81,35 @@ class App extends Component {
           {/* Create Genres component */}
           <h3>Genres</h3>
           <div className="filters__genres">
-            <Genres
-              genres={genres}
-              clickCheckBox={this.clickCheckBox}
-            />
+            {genresLoading ?
+              'Loading'
+              :
+              <Genres
+                genres={genres}
+                clickCheckBox={this.clickCheckBox}
+              />
+            }
           </div>
         </section>
 
         <section class="movies"> 
           <h2>Movies</h2>
           <div className="movies__results">
-            {movies && this.filterMovies(movies).map((movie, key) => {
-              return (
-                <Movie
-                  imagePath={movie.poster_path}
-                  title={movie.title}
-                  genreIds={movie.genre_ids}
-                  genres={genres}
-                  key={key}
-                />
-              )
-            })}
+            {moviesLoading ?
+              'Loading'
+              :
+              movies && this.filterMovies(movies).map((movie, key) => {
+                return (
+                  <Movie
+                    imagePath={movie.poster_path}
+                    title={movie.title}
+                    genreIds={movie.genre_ids}
+                    genres={genres}
+                    key={key}
+                  />
+                )
+              })
+            }
           </div>
         </section>
       </main>
