@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Movie from './MovieContainer';
+import Genres from './GenresContainer';
 import Rating from './Rating'
 import '../App.css';
 
@@ -77,14 +78,10 @@ class App extends Component {
           />
           <h3>Genres</h3>
           <div className="filters__genres">
-            {genres && genres.map((genre, key) => {
-              return (
-                <div className="filters__genre" onClick={this.clickCheckBox} key={key}>
-                  <label htmlFor={`genre-${genre.id}`}>{genre.name}</label>
-                  <input type="checkbox" id={`genre-${genre.id}`} value={genre.id} />
-                </div>
-              )
-            })}
+            <Genres
+              genres={genres}
+              clickCheckBox={this.clickCheckBox}
+            />
           </div>
         </section>
 
