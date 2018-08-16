@@ -13,7 +13,7 @@ export class AppContainer extends Component {
       genres: null,
       movies: null,
       genre_filter: [],
-      score_filter: 0
+      score_filter: 3
     }
 
     this.clickCheckBox = this.clickCheckBox.bind(this);
