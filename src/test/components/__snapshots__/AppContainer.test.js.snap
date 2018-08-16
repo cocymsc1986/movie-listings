@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppContainer component Should render 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AppContainer
+    genres={
+        Object {
+            "data": Array [
+              "test-genres",
+            ],
+            "loading": false,
+          }
+    }
+    getGenres={[Function]}
+    getLatest={[Function]}
+    movies={
+        Object {
+            "data": Object {
+              "results": Array [
+                Object {
+                  "name": "test-genres",
+                  "popularity": 5,
+                },
+                Object {
+                  "name": "test-genres",
+                  "popularity": 5,
+                },
+              ],
+            },
+            "loading": false,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "clickCheckBox": [Function],
+      "filterMovies": [Function],
+      "genres": null,
+      "genresError": undefined,
+      "genresLoading": false,
+      "movies": null,
+      "moviesError": undefined,
+      "moviesLoading": false,
+      "score_filter": 0,
+      "updateScoreFilter": [Function],
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "clickCheckBox": [Function],
+        "filterMovies": [Function],
+        "genres": null,
+        "genresError": undefined,
+        "genresLoading": false,
+        "movies": null,
+        "moviesError": undefined,
+        "moviesLoading": false,
+        "score_filter": 0,
+        "updateScoreFilter": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

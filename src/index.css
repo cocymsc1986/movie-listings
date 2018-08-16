@@ -3,3 +3,213 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.app {
+  padding: 1rem;
+  display: flex;
+}
+
+.filters {
+  width: 25%;
+  margin-right: 2%;
+}
+
+.movies {
+  width: 73%;
+}
+
+.filters__genres {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.filters__genre {
+  width: 50%;
+  padding: 0.75rem;
+  border: 1px solid #fff;
+  background: #00bab3;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.filters__genre.filters__genre--selected {
+  background: #019b95;
+  box-shadow: inset 3px 3px 10px #018782;
+}
+
+.filters__genre label {
+  pointer-events: none;
+}
+
+.filters__genre input[type=checkbox] {
+  display: none;
+}
+
+.movies__results {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.movies__result {
+  width: 50%;
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.movies__image {
+  margin-right: 0.5rem;
+}
+
+.movies__genre-label {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  background: #5900bf;
+  color: #fff;
+}
+
+.movies__genre-label:last-child {
+  margin-right: 0;
+}
+
+/* Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 95%;
+  background: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 95%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -11px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  background: #00bab3;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  background: #00bab3;
+  border-radius: 3px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 7px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  border-radius: 2.6px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #00bab3;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #00bab3;
+  border-radius: 2.6px;
+}
+
+/* Slider end */
+
+@media only screen and (max-width: 1024px) {
+  .movies__result { 
+    width: 100%;
+  }
+
+  .filters {
+    width: 30%;
+  }
+  
+  .movies {
+    width: 68%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .filters__genre {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .app {
+    display: block;
+  }
+
+  .filters {
+    width: 100%;
+    margin-right: 0%;
+  }
+  
+  .movies {
+    width: 100%;
+  }
+
+  .filters__genre {
+    font-size: 14px;
+    width: 25%;
+  }
+}
