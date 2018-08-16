@@ -9,6 +9,7 @@ Clone this repo
 Create a .env file and add the following keys:
 
 `REACT_APP_API_BASE_URL` - this is currently https://api.themoviedb.org/3
+
 `REACT_APP_API_KEY`
 
 run `npm install` or `yarn install`
