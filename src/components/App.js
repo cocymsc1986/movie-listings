@@ -20,6 +20,7 @@ class App extends Component {
     this.updateScoreFilter = this.updateScoreFilter.bind(this);
   }
 
+  /* Move functions into App Container - make stateless */
   async componentWillMount() {
     await Promise.all([this.props.getGenres(), this.props.getLatest()]);
     const { genres } = this.props.genres.data;
@@ -76,6 +77,7 @@ class App extends Component {
             ratingValue={score_filter}
             updateScoreFilter={this.updateScoreFilter}
           />
+          {/* Create Genres component */}
           <h3>Genres</h3>
           <div className="filters__genres">
             <Genres
