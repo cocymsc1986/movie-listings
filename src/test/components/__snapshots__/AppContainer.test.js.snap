@@ -6,9 +6,26 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <AppContainer
     genres={
         Object {
-            "data": Array [
-              "test-genres",
-            ],
+            "data": Object {
+              "genres": Array [
+                Object {
+                  "id": 1,
+                  "name": "Action",
+                },
+                Object {
+                  "id": 2,
+                  "name": "Adventure",
+                },
+                Object {
+                  "id": 3,
+                  "name": "Comedy",
+                },
+                Object {
+                  "id": 4,
+                  "name": "Romance",
+                },
+              ],
+            },
             "loading": false,
           }
     }
@@ -19,10 +36,18 @@ ShallowWrapper {
             "data": Object {
               "results": Array [
                 Object {
+                  "genre_ids": Array [
+                    2,
+                    3,
+                  ],
                   "name": "test-genres",
                   "popularity": 5,
                 },
                 Object {
+                  "genre_ids": Array [
+                    3,
+                    4,
+                  ],
                   "name": "test-genres",
                   "popularity": 5,
                 },

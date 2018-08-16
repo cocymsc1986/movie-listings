@@ -12,11 +12,43 @@ describe('AppContainer component', () => {
 		getGenres: mockGetGenres,
 		getLatest: mockGetLatest,
 		genres: {
-			data: ['test-genres'],
+			data: {
+				genres: [
+					{
+						id: 1,
+						name: 'Action'
+					},
+					{
+						id: 2,
+						name: 'Adventure'
+					},
+					{
+						id: 3,
+						name: 'Comedy'
+					},
+					{
+						id: 4,
+						name: 'Romance'
+					}
+				],
+			},
 			loading: false
 		},
 		movies: {
-			data: { results: [{name: 'test-genres', popularity: 5}, {name: 'test-genres', popularity: 5}]},
+			data: {
+				results: [
+					{
+						name: 'test-genres',
+						popularity: 5,
+						genre_ids: [2, 3]
+					},
+					{
+						name: 'test-genres',
+						popularity: 5,
+						genre_ids: [3, 4]
+					}
+				]
+			},
 			loading: false
 		}
 	}
@@ -33,6 +65,24 @@ describe('AppContainer component', () => {
 	test('updateScoreFilter should update state', () => {
 		wrapper.instance().updateScoreFilter({ target: { value: 1 } } );
 		expect(wrapper.state().score_filter).toBe(1);
+	});
+
+	test('filterGenres should return filtered genre list', () => {
+		wrapper.instance().filterGenres();
+		expect(wrapper.state().genres).toEqual([
+			{
+				id: 2,
+				name: 'Adventure'
+			},
+			{
+				id: 3,
+				name: 'Comedy'
+			},
+			{
+				id: 4,
+				name: 'Romance'
+			}
+		]);
 	});
 
 	test('clickCheckBox should update state', () => {

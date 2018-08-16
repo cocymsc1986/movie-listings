@@ -22,16 +22,35 @@ export class AppContainer extends Component {
 
   async componentWillMount() {
     await Promise.all([this.props.getGenres(), this.props.getLatest()]);
-    const { genres } = this.props.genres.data;
     const { results: movies } = this.props.movies.data;
 
     // Sort by popularity
     movies.sort((a, b) => b.popularity - a.popularity)
 
+    // Get relevant genres
+    const genres = this.filterGenres();
+
     this.setState({
       genres,
       movies
     });
+  }
+
+  filterGenres() {
+    const { genres: { data: { genres } }, movies: { data: { results } } } = this.props;
+    let applicableGenres = [];
+
+    // Find which genres we need from the returned movies and push into array applicableGenres
+    results.forEach(movie => {
+      movie.genre_ids.forEach(id => {
+        if (!applicableGenres.includes(id)) { 
+          applicableGenres.push(id)
+        }
+      });
+    });
+
+    // filter the genre list to only include what is in applicableGenres
+    return genres.filter(genre => applicableGenres.includes(genre.id));
   }
 
   updateScoreFilter(event) {
