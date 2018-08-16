@@ -1,0 +1,1076 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component Should render 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="filters"
+>
+          <h2>
+                    Filters
+          </h2>
+          <Unknown
+                    ratingValue={undefined}
+                    updateScoreFilter={undefined}
+          />
+          <h3>
+                    Genres
+          </h3>
+          <div
+                    className="filters__genres"
+          >
+                    <Genres
+                              clickCheckBox={undefined}
+                              genres={undefined}
+                    />
+          </div>
+</section>,
+        <section
+          class="movies"
+>
+          <h2>
+                    Movies
+          </h2>
+          <div
+                    className="movies__results"
+          />
+</section>,
+      ],
+      "className": "app",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Filters
+</h2>,
+            <Unknown
+              ratingValue={undefined}
+              updateScoreFilter={undefined}
+/>,
+            <h3>
+              Genres
+</h3>,
+            <div
+              className="filters__genres"
+>
+              <Genres
+                            clickCheckBox={undefined}
+                            genres={undefined}
+              />
+</div>,
+          ],
+          "className": "filters",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Filters",
+            },
+            "ref": null,
+            "rendered": "Filters",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "ratingValue": undefined,
+              "updateScoreFilter": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Genres",
+            },
+            "ref": null,
+            "rendered": "Genres",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Genres
+                clickCheckBox={undefined}
+                genres={undefined}
+/>,
+              "className": "filters__genres",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "clickCheckBox": undefined,
+                "genres": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Movies
+</h2>,
+            <div
+              className="movies__results"
+/>,
+          ],
+          "class": "movies",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Movies",
+            },
+            "ref": null,
+            "rendered": "Movies",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "movies__results",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="filters"
+>
+            <h2>
+                        Filters
+            </h2>
+            <Unknown
+                        ratingValue={undefined}
+                        updateScoreFilter={undefined}
+            />
+            <h3>
+                        Genres
+            </h3>
+            <div
+                        className="filters__genres"
+            >
+                        <Genres
+                                    clickCheckBox={undefined}
+                                    genres={undefined}
+                        />
+            </div>
+</section>,
+          <section
+            class="movies"
+>
+            <h2>
+                        Movies
+            </h2>
+            <div
+                        className="movies__results"
+            />
+</section>,
+        ],
+        "className": "app",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Filters
+</h2>,
+              <Unknown
+                ratingValue={undefined}
+                updateScoreFilter={undefined}
+/>,
+              <h3>
+                Genres
+</h3>,
+              <div
+                className="filters__genres"
+>
+                <Genres
+                                clickCheckBox={undefined}
+                                genres={undefined}
+                />
+</div>,
+            ],
+            "className": "filters",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Filters",
+              },
+              "ref": null,
+              "rendered": "Filters",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "ratingValue": undefined,
+                "updateScoreFilter": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Genres",
+              },
+              "ref": null,
+              "rendered": "Genres",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Genres
+                  clickCheckBox={undefined}
+                  genres={undefined}
+/>,
+                "className": "filters__genres",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "clickCheckBox": undefined,
+                  "genres": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Movies
+</h2>,
+              <div
+                className="movies__results"
+/>,
+            ],
+            "class": "movies",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Movies",
+              },
+              "ref": null,
+              "rendered": "Movies",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "movies__results",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`App component Should render with genresError 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    genresError={true}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="filters"
+>
+          <h2>
+                    Filters
+          </h2>
+          <Unknown
+                    ratingValue={undefined}
+                    updateScoreFilter={undefined}
+          />
+          <h3>
+                    Genres
+          </h3>
+          Error loading genre filters
+</section>,
+        <section
+          class="movies"
+>
+          <h2>
+                    Movies
+          </h2>
+          <div
+                    className="movies__results"
+          />
+</section>,
+      ],
+      "className": "app",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Filters
+</h2>,
+            <Unknown
+              ratingValue={undefined}
+              updateScoreFilter={undefined}
+/>,
+            <h3>
+              Genres
+</h3>,
+            "Error loading genre filters",
+          ],
+          "className": "filters",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Filters",
+            },
+            "ref": null,
+            "rendered": "Filters",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "ratingValue": undefined,
+              "updateScoreFilter": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Genres",
+            },
+            "ref": null,
+            "rendered": "Genres",
+            "type": "h3",
+          },
+          "Error loading genre filters",
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Movies
+</h2>,
+            <div
+              className="movies__results"
+/>,
+          ],
+          "class": "movies",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Movies",
+            },
+            "ref": null,
+            "rendered": "Movies",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "movies__results",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="filters"
+>
+            <h2>
+                        Filters
+            </h2>
+            <Unknown
+                        ratingValue={undefined}
+                        updateScoreFilter={undefined}
+            />
+            <h3>
+                        Genres
+            </h3>
+            Error loading genre filters
+</section>,
+          <section
+            class="movies"
+>
+            <h2>
+                        Movies
+            </h2>
+            <div
+                        className="movies__results"
+            />
+</section>,
+        ],
+        "className": "app",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Filters
+</h2>,
+              <Unknown
+                ratingValue={undefined}
+                updateScoreFilter={undefined}
+/>,
+              <h3>
+                Genres
+</h3>,
+              "Error loading genre filters",
+            ],
+            "className": "filters",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Filters",
+              },
+              "ref": null,
+              "rendered": "Filters",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "ratingValue": undefined,
+                "updateScoreFilter": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Genres",
+              },
+              "ref": null,
+              "rendered": "Genres",
+              "type": "h3",
+            },
+            "Error loading genre filters",
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Movies
+</h2>,
+              <div
+                className="movies__results"
+/>,
+            ],
+            "class": "movies",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Movies",
+              },
+              "ref": null,
+              "rendered": "Movies",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "movies__results",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
+exports[`App component Should render with moviesError 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App
+    moviesError={true}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <section
+          className="filters"
+>
+          <h2>
+                    Filters
+          </h2>
+          <Unknown
+                    ratingValue={undefined}
+                    updateScoreFilter={undefined}
+          />
+          <h3>
+                    Genres
+          </h3>
+          <div
+                    className="filters__genres"
+          >
+                    <Genres
+                              clickCheckBox={undefined}
+                              genres={undefined}
+                    />
+          </div>
+</section>,
+        <section
+          class="movies"
+>
+          <h2>
+                    Movies
+          </h2>
+          Error loading movies
+</section>,
+      ],
+      "className": "app",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Filters
+</h2>,
+            <Unknown
+              ratingValue={undefined}
+              updateScoreFilter={undefined}
+/>,
+            <h3>
+              Genres
+</h3>,
+            <div
+              className="filters__genres"
+>
+              <Genres
+                            clickCheckBox={undefined}
+                            genres={undefined}
+              />
+</div>,
+          ],
+          "className": "filters",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Filters",
+            },
+            "ref": null,
+            "rendered": "Filters",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "ratingValue": undefined,
+              "updateScoreFilter": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Genres",
+            },
+            "ref": null,
+            "rendered": "Genres",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Genres
+                clickCheckBox={undefined}
+                genres={undefined}
+/>,
+              "className": "filters__genres",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "clickCheckBox": undefined,
+                "genres": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "section",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Movies
+</h2>,
+            "Error loading movies",
+          ],
+          "class": "movies",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Movies",
+            },
+            "ref": null,
+            "rendered": "Movies",
+            "type": "h2",
+          },
+          "Error loading movies",
+        ],
+        "type": "section",
+      },
+    ],
+    "type": "main",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <section
+            className="filters"
+>
+            <h2>
+                        Filters
+            </h2>
+            <Unknown
+                        ratingValue={undefined}
+                        updateScoreFilter={undefined}
+            />
+            <h3>
+                        Genres
+            </h3>
+            <div
+                        className="filters__genres"
+            >
+                        <Genres
+                                    clickCheckBox={undefined}
+                                    genres={undefined}
+                        />
+            </div>
+</section>,
+          <section
+            class="movies"
+>
+            <h2>
+                        Movies
+            </h2>
+            Error loading movies
+</section>,
+        ],
+        "className": "app",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Filters
+</h2>,
+              <Unknown
+                ratingValue={undefined}
+                updateScoreFilter={undefined}
+/>,
+              <h3>
+                Genres
+</h3>,
+              <div
+                className="filters__genres"
+>
+                <Genres
+                                clickCheckBox={undefined}
+                                genres={undefined}
+                />
+</div>,
+            ],
+            "className": "filters",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Filters",
+              },
+              "ref": null,
+              "rendered": "Filters",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "ratingValue": undefined,
+                "updateScoreFilter": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Genres",
+              },
+              "ref": null,
+              "rendered": "Genres",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Genres
+                  clickCheckBox={undefined}
+                  genres={undefined}
+/>,
+                "className": "filters__genres",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "clickCheckBox": undefined,
+                  "genres": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "section",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Movies
+</h2>,
+              "Error loading movies",
+            ],
+            "class": "movies",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Movies",
+              },
+              "ref": null,
+              "rendered": "Movies",
+              "type": "h2",
+            },
+            "Error loading movies",
+          ],
+          "type": "section",
+        },
+      ],
+      "type": "main",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getSnapshotBeforeUpdate": true,
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
