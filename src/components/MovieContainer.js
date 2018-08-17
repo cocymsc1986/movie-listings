@@ -2,14 +2,7 @@ import React from 'react';
 import Movie from './Movie';
 
 export const getGenreLabels = (genreIds, genres) => {
-	let labels = [];
-
-	genreIds.map(id => {
-		const label = genres.find(genre => genre.id === id);
-		labels.push(label.name);
-	});
-	
-	return labels;
+	return genreIds.map(id => genres.find(genre => genre.id === id).name);
 };
 
 export const MovieContainer = ({ imagePath, title, genreIds, genres }) => {
