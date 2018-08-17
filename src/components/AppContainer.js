@@ -83,7 +83,7 @@ export class AppContainer extends Component {
     const { genre_filter, score_filter } = this.state;
 
     return movies.filter(movie => {
-      return genre_filter.every(id => movie.genre_ids.includes(parseInt(id, 10))) && movie.vote_average > score_filter;
+      return genre_filter.every(id => movie.genre_ids.includes(parseInt(id, 10))) && movie.vote_average >= score_filter;
     });
   }
 
